@@ -1,15 +1,31 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-oklog-ulid
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Martina Ferrari <tincho@debian.org>,
+Section: devel
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 12),
+               dh-golang,
+               golang-any,
+Standards-Version: 4.4.1
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-oklog-ulid
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-oklog-ulid.git
+Homepage: https://github.com/oklog/ulid
+XS-Go-Import-Path: github.com/oklog/ulid
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-oklog-ulid-dev
+Architecture: all
+Depends: ${misc:Depends},
+         ${shlibs:Depends},
+Description: ULID generation library for Golang
+ Universally Unique Lexicographically Sortable Identifier (ULID) in Go
+ .
+ A Go port of alizain/ulid (https://github.com/alizain/ulid) with binary
+ format implemented.
+ .
+ A ULID is a replacement for GUID/UUIDs with some useful properties:
+ .
+  * Lexicographically sortable.
+  * Compatible with UUID/GUIDs.
+  * Very fast generation.
+  * Canonically encoded as a 26 character string.

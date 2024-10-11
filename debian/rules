@@ -1,4 +1,7 @@
 #!/usr/bin/make -f
 
+# Disable sample command-line tool which pulls an extra unpackaged dependency.
+export DH_GOLANG_EXCLUDES := cmd/
+
 %:
-	dh $@
+	dh $@ --buildsystem=golang --with=golang

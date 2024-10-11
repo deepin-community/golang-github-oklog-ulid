@@ -1,5 +1,26 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-oklog-ulid (2.0.2+ds-2) unstable; urgency=medium
 
-  * Initial release
+  * Re-build and upload after a botched Git merge.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Martina Ferrari <tincho@debian.org>  Wed, 30 Oct 2019 18:30:43 +0000
+
+golang-github-oklog-ulid (2.0.2+ds-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Martina Ferrari ]
+  * New upstream release.
+  * Automatic cme fixes.
+  * Name update.
+  * Disable compilation of command-line tool, and document unvendoring.
+  * Update watch file.
+  * Update gbp.conf.
+
+ -- Martina Ferrari <tincho@debian.org>  Wed, 30 Oct 2019 17:28:47 +0000
+
+golang-github-oklog-ulid (0.3.0+git20170117.66bb656-1) unstable; urgency=medium
+
+  * Initial release. Closes: 876296
+
+ -- Martín Ferrari <tincho@debian.org>  Sun, 24 Sep 2017 12:17:36 +0000
